@@ -1,6 +1,7 @@
 let container = document.querySelector("#container");
 let grid_dimensions = 16;
 const GRID_WIDTH = 840;
+let randomColor = false;
 
 function setDimensions(){
     grid_dimensions = parseInt(prompt("Enter new side length between 0 and 100:"));
@@ -27,11 +28,22 @@ function createGrid(){
         square.style["height"] = `${GRID_WIDTH/grid_dimensions}px`;
 
         square.addEventListener("mouseover",() => {
-            square.classList.add("draw");
+            if (randomColor){
+                let R = Math.floor(Math.random()*257);
+                let G = Math.floor(Math.random()*257);
+                let B = Math.floor(Math.random()*257);
+                square.style["background-color"] = `rgb(${R},${G},${B})`;
+            }
+            else
+                square.style["background-color"] = "black";
         })
 
         container.appendChild(square);
     }
+}
+
+function toggleRandomColor(){
+    randomColor = !randomColor;
 }
 
 createGrid(grid_dimensions);
