@@ -1,3 +1,10 @@
+body{
+    text-align: center;
+}
+button{
+    margin: 20px
+}
+
 #container{
     display:flex;
     justify-content:center;
@@ -6,11 +13,12 @@
     width:840px;
     height:840px;
     flex-wrap: wrap;
+    border:1px solid black;
 }
 
 #container div {
-    border:1px solid black;
-    margin:-1px;
+    box-sizing: border-box;
+    border:.5px solid black;
 }
 
 .draw{
