@@ -1,0 +1,15 @@
+#container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin:auto;
+    width:840px;
+    height:840px;
+    border:1px solid pink;
+    flex-wrap: wrap;
+}
+
+#container div {
+    border:1px solid black;
+    margin:-1px;
+}
