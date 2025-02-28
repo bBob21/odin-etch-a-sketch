@@ -18,5 +18,5 @@ button{
 
 #container div {
     box-sizing: border-box;
-    border:.5px solid black;
+    border:.5px dashed black;
 }
